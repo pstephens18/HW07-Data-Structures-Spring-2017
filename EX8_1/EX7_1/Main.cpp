@@ -17,6 +17,11 @@ template <typename T>
 int binary_search(const vector<T> &items, int first, int last, T target) {
 	// FIXME: Implement recursive binary search
 
+	// Check to see if target is within bounds
+	if (target < items[first] || target > items[last]) {
+		return -1;
+	}
+
 	// Calculate Midpoint
 	int mid = first + ((last - first) / 2);
 	
